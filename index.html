@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Phòng Net</title>
+    <script defer src="script.js"></script>
+	<style>
+	/* Đặt lại các thuộc tính mặc định để giao diện nhất quán */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+}
+
+/* Tiêu đề chính */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Ô nhập liệu */
+input {
+    width: 250px;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+}
+
+/* Căn chỉnh ô nhập và nhãn */
+label {
+    display: block;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Nút đăng nhập */
+button {
+    width: 100%;
+    max-width: 270px;
+    padding: 10px;
+    margin-top: 15px;
+    background: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #e68900;
+    transform: scale(1.05);
+}
+
+/* Phần menu sau khi đăng nhập */
+#menu {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: none;
+    backdrop-filter: blur(10px);
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+	</style>
+</head>
+<body>
+    <h1>Hệ Thống Quản Lý Phòng Net</h1>
+    <label>Tên đăng nhập:</label> <input type="text" id="username"><br>
+    <label>Mật khẩu:</label> <input type="password" id="password"><br>
+    <button onclick="login()">Đăng nhập</button>
+
+    <div id="menu" style="display:none;">
+        <h2>Chào mừng <span id="userName"></span></h2>
+        <button onclick="showMenu()">Hiển thị Menu</button>
+        <div id="options"></div>
+    </div>
+</body>
+</html>

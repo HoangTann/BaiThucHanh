@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "role": "player",
+      "name": "Nguyen Van A",
+      "username": "player1",
+      "password": "123456",
+      "balance": 50000
+    },
+    {
+      "id": 2,
+      "role": "employee",
+      "name": "Tran Van B",
+      "username": "employee1",
+      "password": "123456"
+    },
+    {
+      "id": 3,
+      "role": "admin",
+      "name": "Admin",
+      "username": "admin",
+      "password": "admin"
+    }
+  ],
+  "computers": [
+    {
+      "id": 1,
+      "room": 101,
+      "status": "Đang hoạt động",
+      "config": {
+        "monitor": "Dell 24 inch",
+        "cpu": "Intel i5",
+        "ram": "8GB",
+        "storage": "SSD 512GB"
+      }
+    },
+    {
+      "id": 2,
+      "room": 101,
+      "status": "Bảo trì",
+      "config": {
+        "monitor": "LG 27 inch",
+        "cpu": "Ryzen 7",
+        "ram": "16GB",
+        "storage": "HDD 1TB"
+      }
+    }
+  ],
+  "violations": []
+}
